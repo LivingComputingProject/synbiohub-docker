@@ -15,7 +15,7 @@ RUN apt-get install -y \
 RUN useradd ubuntu -p ubuntu -m -s /bin/bash
 
 # Install the hub directly from git
-RUN cd /opt && git clone https://github.com/ICO2S/synbiohub.git --depth 1 --branch v1.1.0
+RUN cd /opt && git clone https://github.com/LivingComputingProject/synbiohub.git --depth 1 --branch v1.1.0
 RUN cd /opt/synbiohub && npm install && npm install -g forever
 RUN chown -R ubuntu:ubuntu /opt/synbiohub
 
